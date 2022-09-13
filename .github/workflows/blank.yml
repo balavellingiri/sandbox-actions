@@ -37,9 +37,4 @@ jobs:
           
       - name: curl trigger another repo
         run: |
-          curl \
-            -X POST \
-            -H "Accept: application/vnd.github+json" \ 
-            -H "Authorization: Bearer "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" \
-            https://api.github.com/repos/balavellingiri/learn-github-actions/dispatches \
-            -d '{"event_type":"on-demand-test"}'
+          curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: Bearer "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" https://api.github.com/repos/balavellingiri/learn-github-actions/dispatches -d '{"event_type":"on-demand-test"}'
