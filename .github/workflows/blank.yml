@@ -39,6 +39,7 @@ jobs:
         run: >
           curl -X POST
           --header 'Accept: application/vnd.github+json'
+          --header 'content-type: application/json'
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}'  
           --url  https://api.github.com/repos/balavellingiri/learn-github-actions/dispatches
           --data '{"event_type":"build"}'
